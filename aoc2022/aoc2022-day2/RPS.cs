@@ -87,24 +87,6 @@ public static class RPS
         }
         return outcomeScore;
     }
-
-    public static int calculateScoreBasedOnDesiredOutcome(string SecretStrategyGuidesChoice)
-    {
-        int desiredOutcomescore = 0;
-        if (SecretStrategyGuidesChoice == "X")
-        {
-            //Loss
-            return desiredOutcomescore = 0;
-        } else if (SecretStrategyGuidesChoice == "Y")
-        {
-            return desiredOutcomescore = 3;
-        } else if (SecretStrategyGuidesChoice == "Z")
-        {
-            return desiredOutcomescore = 6;
-        }
-         
-        return 0;
-    }
     public static string whichObjectBasedOnOutcome(string OpponentsChoice, string SecretStrategyGuidesChoice)
     {
         OpponentObject = useRealNamesForObjects(OpponentsChoice);
@@ -125,14 +107,5 @@ public static class RPS
             returnValue = "Z";
         }
         return returnValue;
-    }
-
-    public static int calculateSuperSecretScore(string OpponentsChoice, string SecretStrategyGuidesChoice)
-    {
-        int superSecretscore = 0;
-        superSecretscore += calculateScoreBasedOnDesiredOutcome(SecretStrategyGuidesChoice);
-
-
-        return 0;
     }
 }
