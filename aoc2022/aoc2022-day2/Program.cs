@@ -10,7 +10,7 @@ strings = System.IO.File.ReadAllLines(@"..\..\..\..\inputs\day2.txt").ToList();
 string[] matchup = { "", "" };
 
 int totalScore = 0;
-foreach(string s in strings)
+foreach (string s in strings)
 {
     matchup = s.Split(null);
     totalScore += RPS.calculateScore(matchup[0], matchup[1]);
@@ -18,7 +18,14 @@ foreach(string s in strings)
 
 Console.WriteLine("Total Score = " + totalScore);
 
-
 //Part2
+
+int totalScoreTask2 = 0;
+foreach(string s in strings)
+{
+    matchup = s.Split(null);
+    totalScoreTask2 += RPS.calculateScore(matchup[0], RPS.whichObjectBasedOnOutcome(matchup[0], matchup[1]));
+}
+Console.WriteLine("Total Score for Task 2 = " + totalScoreTask2);
 
 Console.ReadKey();
