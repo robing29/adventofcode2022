@@ -21,7 +21,7 @@ Console.WriteLine("Total Score = " + totalScore);
 //Part2
 
 int totalScoreTask2 = 0;
-foreach(string s in strings)
+foreach (string s in strings)
 {
     matchup = s.Split(null);
     totalScoreTask2 += RPS.calculateScore(matchup[0], RPS.whichObjectBasedOnOutcome(matchup[0], matchup[1]));
