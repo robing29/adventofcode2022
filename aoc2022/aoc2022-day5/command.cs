@@ -39,8 +39,8 @@ namespace aoc2022_day5
             {
                 grid[ToStack].Insert(0, item);
             }
-            DebugVariables();
-            ShowStack(grid);
+            //DebugVariables();
+            //ShowStack(grid);
         }
         public static void MoveStack9001(List<List<string>> grid, string line)
         {
@@ -52,8 +52,8 @@ namespace aoc2022_day5
             {
                 grid[ToStack].Insert(0, item);
             }
-            DebugVariables();
-            ShowStack(grid);
+            //DebugVariables();
+            //ShowStack(grid);
         }
 
         public static void ShowStack(List<List<string>> grid)

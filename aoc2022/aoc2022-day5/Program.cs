@@ -21,16 +21,16 @@ for (int substringCounter = 0; substringCounter < uneditedList[0].Length; substr
 }
 grid = grid.Select(x => x.Where(s => !string.IsNullOrEmpty(s)).ToList()).ToList();
 
-
+var grid1 = grid.Select(x => new List<string>(x)).ToList();
 ///<summary>Part 1</summary>
 ///
 
-//foreach (string s in commands)
-//{
+foreach (string s in commands)
+{
 
-//    Command.MoveStack(grid, s);
-//}
-//Console.WriteLine(Command.EndStack(grid));
+    Command.MoveStack(grid, s);
+}
+Console.WriteLine(Command.EndStack(grid));
 
 ///<summary>Part 2</summary>
 ///
@@ -38,7 +38,7 @@ grid = grid.Select(x => x.Where(s => !string.IsNullOrEmpty(s)).ToList()).ToList(
 foreach (string s in commands)
 {
 
-    Command.MoveStack9001(grid, s);
+    Command.MoveStack9001(grid1, s);
 }
-Console.WriteLine(Command.EndStack(grid));
+Console.WriteLine(Command.EndStack(grid1));
 
