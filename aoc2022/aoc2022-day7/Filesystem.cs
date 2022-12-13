@@ -9,20 +9,34 @@ namespace aoc2022_day7
     internal class Folder
     {
         public string? Name { get; set; }
-        public List<Folder>? Subdirectories { get; set; }
-        public List<File>? Files { get; set; }
-
-        public Folder (List<string> input)
+        public List<string>? ContainedFilesOrFolders { get; set; }
+        public Folder (string cdLine)
         {
-            
+            Name = cdLine;
+            ContainedFilesOrFolders = new List<string>();
         }
 
     }
 
-    internal class File
+    internal class FileSystemFile
     {
         public string? Name { get; set; }
         public int? Size { get; set; }
-
     }
+    public class Dir
+    {
+        public string? Name { get; set; }
+        public List<Dir>? Subdirectories { get; set; }
+        public List<FileSys>? Files { get; set; }
+        public long? TotalSize { get; set; }
+    }
+
+    public class FileSys
+    {
+        public string? Name { get; set; }
+        public long? Size { get; set; }
+    }
+
+    
+
 }
